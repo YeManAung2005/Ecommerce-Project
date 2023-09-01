@@ -333,7 +333,7 @@ body {
   border-bottom-right-radius: 0;
   outline: none;
 }
-#mail button {
+#mail #submit-button {
   background-color: red;
   white-space: nowrap;
   color: #fff;
@@ -344,6 +344,7 @@ body {
   display: flex;
   width: 40%;
 }
+
 /* footer */
 
 footer .info {
@@ -382,8 +383,13 @@ footer .follow i {
   font-size: 15px;
   padding-right: 10px;
 }
-
-footer .install .row img {
+footer .install .img-con{
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .install .img-con img {
+  width: 150px;
   border: 1px solid #000000;
   border-radius: 6px;
   margin: 10px 0 15px 0;

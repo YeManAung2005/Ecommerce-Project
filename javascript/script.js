@@ -14,19 +14,22 @@ if (close) {
   });
 }
 
+// emial validation
+var emailField = document.getElementById("email-field");
+var submitButton = document.getElementById("submit-button");
 function emailValidation() {
-  var emailField = document.getElementById("email-field");
-
   if (
     !emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
   ) {
     emailField.style.borderColor = "red";
+    submitButton.style.backgroundColor = "red";
     return false;
-  } else {
-    emailField.style.borderColor = "transparent";
-    return true;
   }
-  function onKeyDown() {
-    document.getElementById("email-field").style.borderColor = "transparent";
-  }
+
+  emailField.style.borderColor = "green";
+  submitButton.style.backgroundColor = "green";
+  return true;
 }
+submitButton.addEventListener("click", () => {
+  emailField.value = " ";
+});

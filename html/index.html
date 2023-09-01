@@ -10,6 +10,12 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    //bootstrap link
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
     <section id="header">
@@ -327,12 +333,70 @@
           <span>special offers.</span>
         </p>
       </div>
-      <div class="form">
-        <input id="email-field" type="text" placeholder="Your email address" onkeyup="emailValidation()"/>
-        <button id="submit-button" class="normal-button">Sign Up</button>
-      </div>
-    </section>
+      <form class="form" id="myForm">
+        <input
+          id="email-field"
+          type="text"
+          placeholder="Your email address"
+          onkeyup="emailValidation()"
+        />
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          id="submit-button"
+          class="normal-button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Submit
+        </button>
 
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Email has successfully submitted
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                We will send the updates about our latest shop and special
+                offers.
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-dark"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-danger">
+                  Understood
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    
     <footer class="section-p1">
       <div class="info">
         <div class="col">
@@ -381,7 +445,7 @@
         <div class="col install">
           <h4>Install App</h4>
           <p>From App Store or Google Play</p>
-          <div class="row">
+          <div class="img-con">
             <img src="../Img/app/app.jpg" alt="#" />
             <img src="../Img/app/play.jpg" alt="#" />
           </div>
