@@ -282,7 +282,7 @@ body {
 
 #banner button,
 .normal-button {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   padding: 15px 30px;
   color: #1a1a1a;
@@ -327,7 +327,7 @@ body {
   padding: 0 1.25rem;
   font-size: 14px;
   width: 100%;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 4px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
